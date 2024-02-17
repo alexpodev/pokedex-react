@@ -1,0 +1,47 @@
+@import "../../vars.css";
+
+.container {
+  background: var(--main-blue);
+  padding: 20px 20px;
+}
+
+.container h3 {
+  display: block;
+  max-width: 150px;
+  color: white;
+  font-weight: 300;
+}
+
+.searchbar {
+  background: white;
+  display: flex;
+  position: relative;
+  max-width: 200px;
+  justify-content: space-between;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.searchbar input {
+  margin-left: 5px;
+  border: none;
+  max-width: 120px;
+}
+
+.searchbar input::placeholder {
+  color: var(--really-grey);
+}
+
+.searchbar button {
+  cursor: pointer;
+  background-color: var(--black);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: white;
+  z-index: 10;
+}
+
+.searchbar button:hover {
+  background: white;
+}
