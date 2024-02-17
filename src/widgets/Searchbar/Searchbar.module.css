@@ -3,6 +3,7 @@
 .container {
   background: var(--main-blue);
   padding: 20px 20px;
+  position: relative;
 }
 
 .container h3 {
@@ -44,4 +45,13 @@
 
 .searchbar button:hover {
   background: white;
+}
+
+.pokeball {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  opacity: 0.4;
 }

@@ -14,6 +14,7 @@ const Searchbar = ({state, setState, handleClick}: SearchbarProps) => {
 
   return (
     <div className={style.container}>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" alt="" className={style.pokeball}/>
       <h3>
         Who are you looking for?
       </h3>

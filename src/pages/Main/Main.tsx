@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import Searchbar from '../widgets/Searchbar/Searchbar';
-import Card from '../widgets/Card/Card';
-import axios from 'axios';
-import "./App.css"
-import fetchPokemonList from '../api/fetchPokemonList';
+import React, { useEffect, useState } from 'react'
+import Searchbar from '../../widgets/Searchbar/Searchbar'
+import { Pokemon } from '../../shared/types/Pokemon';
+import fetchPokemonList from '../../api/fetchPokemonList';
+import Card from '../../widgets/Card/Card';
+import styles from './Main.module.css';
+import { Link } from 'react-router-dom';
 
-type Pokemon = {
-  name: string,
-  url: string,
-  isVisible: boolean
-}
+type Props = {}
 
-function App() {
-  const totalItems = 1302;
+const Main = (props: Props) => {
+
+    const totalItems = 1302;
   const fetchSize = 20;
 
   const [search, setSearch] = useState('');
@@ -43,23 +41,21 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <>
+    <>
         <Searchbar handleClick={handleClick} state={search} setState={handleInputChange}/>
-        <div className="wrapper">
+        <div className={styles.wrapper}>
           {pokemonList
           .filter((pokemon) => {
             return search.toLowerCase() === "" ? pokemon : pokemon.name.toLowerCase().includes(search)
           })
           .map((pokemon, index) => {
                 return (
-                  <Card label={pokemon.name} url={pokemon.url} isVisible={pokemon.isVisible} key={index}/>
+                    <Card label={pokemon.name} url={pokemon.url} isVisible={pokemon.isVisible} key={index}/>
                 )
               })}
         </div>
       </>
-    </div>
-  );
+  )
 }
 
-export default App;
+export default Main
