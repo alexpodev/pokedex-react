@@ -2,9 +2,11 @@
   --black: #212529;
   --main-blue: #072ac8;
   --bright-yellow: #fdd85d;
+  --dark-yellow: #af8e22;
   --orange: #ff844f;
   --pinky-red: #f14b3d;
   --green: #60d394;
+  --gray: #e8e8e8;
   --light-gray: #f8f9fa;
   --really-grey: #595f65;
   --grass: #16c172;
@@ -25,4 +27,12 @@
   --fairy: #ee4268;
   --water: #4361ee;
   --ice: #90e0ef;
+  --hp: 96, 211, 148;
+  --attack: 241, 81, 68;
+  --defense: 253, 216, 93;
+  --speed: 255, 123, 67;
+  --maxhp: 255;
+  --maxattack: 190;
+  --maxdefense: 230;
+  --maxspeed: 200;
 }

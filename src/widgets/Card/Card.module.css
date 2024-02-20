@@ -34,7 +34,7 @@
   line-height: 1;
 }
 
-img {
+.container img {
   max-height: 100px;
   max-width: 100px;
 }

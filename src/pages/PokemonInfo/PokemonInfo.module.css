@@ -1,9 +1,29 @@
+.header {
+  width: 100%;
+  height: 60px;
+  background: var(--main-blue);
+  position: relative;
+}
+
+.pokeball {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.4;
+}
+
 .wrapper {
+  margin: 20px 0;
   display: flex;
+  position: relative;
+  z-index: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 20px;
 }
 
 .container {
@@ -15,6 +35,8 @@
   -webkit-box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
   -moz-box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
   box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
+  position: relative;
+  z-index: 10;
 }
 
 .headerContainer {
@@ -28,6 +50,7 @@
 .pokemonName {
   line-height: 0;
   color: var(--main-blue);
+  font-weight: 500;
 }
 
 .pokemonId {
@@ -45,12 +68,73 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+}
+
+.statsContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .imageContainer {
-  width: 30%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imageContainer img {
-  background-size: cover;
+  width: 100%;
+}
+
+.breedingsHeader {
+  line-height: 0;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.breedingsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.breedingsBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breedingsBlock p {
+  line-height: 0;
+  font-size: 14px;
+}
+
+.breedingsStats {
+  background-color: var(--light-gray);
+  border: var(--gray) 1px solid;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.abilitiesContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movesContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

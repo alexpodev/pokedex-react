@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PokemonDetails } from '../shared/types/Pokemon';
+import { MoveDetalis, PokemonDetails } from '../shared/types/Pokemon';
 
 export default async function fetchPokemonInfo(pokemonName: string) {
     const apiUrl = 'https://pokeapi.co/api/v2/pokemon';
@@ -11,9 +11,27 @@ export default async function fetchPokemonInfo(pokemonName: string) {
             sprite: response.data.sprites.front_default,
             id: response.data.id,
             types: response.data.types,
-            stats: response.data.stats
+            stats: response.data.stats,
+            weight: response.data.weight,
+            height: response.data.height,
+            abilities: response.data.abilities,
+            moves: response.data.moves,
         }
         return pokemonDetails;
+    } catch (error) {
+        throw error
+    }
+}
+
+export async function fetchPokemonMoveInfo(url: string) {
+    try {
+        const response = await axios.get(url);
+        console.log(response.data);
+        const pokemonMove: MoveDetalis = {
+            name: response.data.name,
+            type: response.data.type
+        }
+        return pokemonMove;
     } catch (error) {
         throw error
     }
