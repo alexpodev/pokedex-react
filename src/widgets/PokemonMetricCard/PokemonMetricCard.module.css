@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
+  -moz-box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
+  box-shadow: 0px 16px 29px 11px rgba(22, 45, 64, 0.16);
+  position: relative;
+  z-index: 10;
+}
+
+.breedingsHeader {
+  line-height: 0;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.breedingsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.breedingsBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breedingsBlock p {
+  line-height: 0;
+  font-size: 14px;
+}
+
+.breedingsStats {
+  background-color: var(--light-gray);
+  border: var(--gray) 1px solid;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    height: auto;
+    width: 100%;
+  }
+}

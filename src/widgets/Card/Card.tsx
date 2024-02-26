@@ -13,10 +13,10 @@ type CardProps = {
 
 type Tags = {
   slot: number,
-  type: Tag,
+  type: Type,
 }
 
-type Tag = {
+type Type = {
   name: string,
   url: string,
 }
@@ -58,9 +58,9 @@ const Card = ({label, url, isVisible}: CardProps) => {
           </div>
           <img src={sprite} alt="" />
           <div className={style.tags}>
-            {tags.map((tag) => {
+            {tags.map((tag, index) => {
               return (
-                <Tag label={tag.type.name}/>
+                <Tag label={tag.type.name} key={index}/>
               )
             })}
           </div>

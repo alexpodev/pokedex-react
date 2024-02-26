@@ -13,6 +13,11 @@
   font-weight: 300;
 }
 
+.searchbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .searchbar {
   background: white;
   display: flex;
